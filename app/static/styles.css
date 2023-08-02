@@ -1,0 +1,170 @@
+:root {
+    --background-color: #222326;
+    --container-color: #2b3139;
+    --button-blue: #007bff;
+}
+
+body {
+    font-family: Verdana;
+    color: #fff; 
+    background-color: #222326;
+}
+
+.home-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    /* background-color: var(--button-blue);
+    border-radius: 20px;
+    border: 4px solid #fff; */
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    height: 40px;
+    width: 40px;
+    background-color: var(--button-blue);
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.home-btn:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7); 
+    transform: scale(1.1); 
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #2b3139;
+    border-radius: 20px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.271);
+    margin-top: 50px;
+}
+
+h1 {
+    color: #fff; 
+    text-align: center;
+    margin-bottom: 30px;
+    border: 4px solid var(--button-blue);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+input {
+    font-family: Verdana; 
+}
+
+.form-control {
+    width: 96.5%;
+    padding: 10px;
+    padding-inline: 0%;
+    padding-left: 20px;
+    background-color: #454f59;
+    border: 15px;
+    border-radius: 12px;
+    color: #fff;
+    outline-color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--button-blue);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: Verdana;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.flex-box {
+    /* Set flex display and justify the content to space between */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center the items vertically in the flex container */
+    height: 30px
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between; /* This and display: flex creates space between the text and the buttons */
+    align-items: center;
+    border-bottom: 10px solid var(--container-color);
+}
+
+.list-group-item-2 {
+    list-style: none;
+    border-bottom: 10px solid var(--container-color);
+}
+
+.player-info {
+    display: flex; /* Use flex to position player name and view stats form in a row */
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-2-item:last-child {
+    border-bottom: none;
+}
+
+.not-found {
+    font-style: italic;
+    color: #dc3545;
+    text-align: center;
+    margin-top: 30px;
+
+    /* not found box. check why it does not work*/
+    padding: 10px;
+    background-color: #343a40;
+    border-radius: 4px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.image-style {
+    width: 180px;
+    height: 180px;
+    border: 4px solid var(--button-blue);
+    border-radius: 20px;
+    margin-bottom: 50px
+}
+
+body.result-page {
+    color: #000;
+}
+
+
+.header-title {
+    color: #fff;
+}

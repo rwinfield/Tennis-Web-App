@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Select Player</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('index') }}"><img src= "{{url_for('static', filename='/Image/home_image.png')}}" class="home-btn"></a>
+    <div class="container mt-5">
+        <h1 class="text-center">Select a Player</h1>
+        <ul class="list-group" style="display: inline;">
+            {% for player in players %}
+                <li class="list-group-item">
+                    {{ player.full_name }}
+                    <form action="{{ url_for('show_player_stats', id=player.id) }}" method="post" style="display: inline;">
+                        <input type="hidden" name="player" value="{{ player }}">
+                        <!-- <input type="hidden" name="id" value="{{ player.id }}"> -->
+                        <button type="submit" class="btn btn-primary btn-sm flex-box">View Statistics</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Player Lookup</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('index') }}"><img src= "{{url_for('static', filename='/Image/home_image.png')}}" class="home-btn"></a>
+    <div class="container mt-5">
+        <h1 class="text-center">Player Lookup</h1>
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-6">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="textbox">Enter a player's name:</label>
+                        <input type="text" name="player_entry" id="textbox" class="form-control" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Player Statistics</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('index') }}"><img src= "{{url_for('static', filename='/Image/home_image.png')}}" class="home-btn"></a>
+    <div class="container">
+        <h1 class="text-center">Player Statistics</h1>
+        {% if player_info %}
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-6">
+                <h2 class="text-center">{{ player_info.full_name }}</h2>
+                <ul class="list-group" style="display: inline;">
+                    {% if player_info.image_url %}
+                    <img src= "{{ player_info.image_url }}" alt="image" class="center image-style">
+                    {% endif %}
+                    <li class="list-group-item-2"><strong>Current Ranking:</strong> {{ player_info.current_ranking }}</li>
+                    <li class="list-group-item-2"><strong>Country:</strong> {{ player_info.country }}</li>
+                    <li class="list-group-item-2"><strong>Prize Money:</strong> {{ player_info.prize_money }}</li>
+                    <li class="list-group-item-2"><strong>Number of Titles:</strong> {{ player_info.num_titles }}</li>                    
+                    <li class="list-group-item-2"><strong>Total Grand Slam Titles:</strong> {{ player_info.total_slams }}</li>
+                    <li class="list-group-item-2"><strong>Win-Loss Record:</strong> {{ player_info.win_loss_record }}</li>
+                    <li class="list-group-item-2"><strong>Career High Ranking:</strong> {{ player_info.career_high }}</li>
+                </ul>
+            </div>
+        </div>
+        {% else %}
+        <p class="text-center">No results found for the provided player name.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
