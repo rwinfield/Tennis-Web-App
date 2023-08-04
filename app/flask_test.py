@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-from webscraping2 import Webscraping
+from webscraping import Webscraping
 
 app = Flask(__name__)
 
