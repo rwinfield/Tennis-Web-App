@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for
+
 from webscraping import Webscraping
 
 app = Flask(__name__)
@@ -36,4 +37,4 @@ def show_player_stats(id):
     return render_template('stats.html', player_info=player)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

@@ -41,6 +41,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 30px;
+    padding-top: 10px;
     background-color: #2b3139;
     border-radius: 20px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.271);
@@ -54,6 +55,10 @@ h1 {
     border: 4px solid var(--button-blue);
     padding: 10px;
     border-radius: 20px;
+}
+
+h2 {
+    margin-bottom: -5px;
 }
 
 .form-group {
@@ -157,7 +162,7 @@ input {
     height: 180px;
     border: 4px solid var(--button-blue);
     border-radius: 20px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
 }
 
 body.result-page {
